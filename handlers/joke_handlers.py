@@ -9,6 +9,11 @@ class JokeHandlers:
         @self.bot.message_handler(commands=['joke'])
         def joke_handlers(message):
             chat_id = message.chat.id
-            translator = EasyGoogleTranslate()
-            self.bot.send_message(chat_id, translator.translate(pyjokes.get_joke(), target_language='ru'),
-                                  parse_mode='html')
+            """Сообщение для PyCharm, что я знаю, что это исключение слишком большое и я с этим согласен"""
+            # noinspection PyBroadException
+            try:
+                translator = EasyGoogleTranslate()
+                self.bot.send_message(chat_id, translator.translate(pyjokes.get_joke(), target_language='ru'),
+                                      parse_mode='html')
+            except Exception:
+                self.bot.send_message(chat_id, 'Не удалось найти шутку', parse_mode='html')
