@@ -2,7 +2,7 @@ class TextHandlerAnswer:
     def __init__(self, bot):
         self.bot = bot
 
-        @self.bot.message_handler(content_types=['text'])
+        @self.bot.message_handler(func=lambda message: True)
         def text_handler_answer(message):
             chat_id = message.chat.id
             '''Сообщение об незарегистрированном сообщении/команде'''
