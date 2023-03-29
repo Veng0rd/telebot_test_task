@@ -1,6 +1,6 @@
-TOKEN = 'YOUR TOKEN'
-OPEN_WEATHER_TOKEN = 'YOUR TOKEN'
-NEWS_API_KEY = 'YOUR TOKEN'
+TOKEN = '5984463263:AAH5koKAXeIehXuo0ny95CZLm7eZHKpJBn4'
+OPEN_WEATHER_TOKEN = '51cef536e57c449ff0ba0d06ffd10324'
+NEWS_API_KEY = 'fc721bef12794e88ad10d924fe26e5e2'
 commands = [
     ('/start', 'Начать работу с ботом'),
     ('/help', 'Вывести список всех доступных команд'),
